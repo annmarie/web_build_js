@@ -1,0 +1,52 @@
+{
+  "name": "simple_react_node_app",
+  "main": "App.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "concurrently \"yarn livejs\" \"yarn startdev\"",
+    "livejs": "NODE_ENV=dev webpack-dev-server --hot --inline",
+    "start": "webpack; node src/server/app.js",
+    "startdev": "NODE_ENV=dev node src/server/app.js",
+    "test": "mocha --recursive"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "concurrently": "^4.1.0",
+    "css-loader": "3.2.0",
+    "dotenv": "^8.1.0",
+    "file-loader": "^4.2.0",
+    "mocha": "^6.0.2",
+    "node-sass": "^4.5.3",
+    "prompt": "^1.0.0",
+    "react-hot-loader": "^4.12.11",
+    "sass-loader": "^7.0.3",
+    "serve-favicon": "^2.4.3",
+    "sinon": "^7.3.1",
+    "sinon-chai": "^3.3.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0",
+    "yarn": "^1.15.2"
+  },
+  "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "d3": "^5.9.2",
+    "express": "~4.17.1",
+    "express-fileupload": "^1.1.5",
+    "express-redis-cache": "~1.1.1",
+    "morgan": "^1.9.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.0",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "request": "^2.88.0",
+    "webpack-cli": "^3.3.7"
+  }
+}
