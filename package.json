@@ -3,10 +3,10 @@
   "main": "App.js",
   "license": "MIT",
   "scripts": {
-    "dev": "concurrently \"yarn livejs\" \"yarn startdev\"",
-    "livejs": "NODE_ENV=dev webpack-dev-server --hot --inline",
+    "dev": "concurrently \"yarn dev:bundle\" \"yarn dev:server\"",
+    "dev:bundle": "NODE_ENV=dev webpack-dev-server --hot --inline",
+    "dev:server": "NODE_ENV=dev nodemon src/server/app --watch src/server",
     "start": "webpack; node src/server/app.js",
-    "startdev": "NODE_ENV=dev node src/server/app.js",
     "test": "mocha --recursive"
   },
   "devDependencies": {
@@ -40,6 +40,7 @@
     "express-fileupload": "^1.1.5",
     "express-redis-cache": "~1.1.1",
     "morgan": "^1.9.0",
+    "nodemon": "^1.19.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
