@@ -3,6 +3,7 @@
   "main": "App.js",
   "license": "MIT",
   "scripts": {
+    "build": "webpack",
     "dev": "concurrently \"yarn dev:bundle\" \"yarn dev:server\"",
     "dev:bundle": "NODE_ENV=dev webpack-dev-server --hot --inline",
     "dev:server": "NODE_ENV=dev nodemon src/server/app --watch src/server",
