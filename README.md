@@ -1,30 +1,23 @@
-# web build js
+# MyMediaList 
 
-This project assumes `yarn` is installed globally.
+### Install dependencies
 
-Run `yarn` to install required node dependencies.
-
----
-
-To run server
+```bash
+npm i
+or
+yarn
 ```
-yarn start
-```
-go to: http://localhost:8000
 
----
+### Run the development server:
 
-To run dev server with hot loading
-```
+```bash
+npm run dev
+or
 yarn dev
 ```
-go to: http://localhost:3000
 
----
+### Visit the developm server:
 
-To run tests
 ```
-yarn test
+http://localhost:8080
 ```
-
----
