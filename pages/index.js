@@ -1,11 +1,12 @@
 import _ from 'lodash';
 import appPageHandler from 'middleware/app-page-handler';
-import styles from 'styles/components/Header.module.scss';
+import styles from 'styles/components/Well.module.scss';
+import appConfig from 'app-config';
 
 export default function Index(_props) {
   return (
-    <div className={styles.well}>
-      <div className="hello"> hello</div>
+    <div>
+      <div className={styles.hello}> hello</div>
     </div>
   );
 }
@@ -13,7 +14,6 @@ export default function Index(_props) {
 export function getServerSideProps(ctx) {
   // middleware
   appPageHandler(ctx.req, ctx.res);
-  const appConfig = _.get(ctx, 'req.appConfig', {});
 
   // pass config data to page props
   return { props: { ...appConfig } };
