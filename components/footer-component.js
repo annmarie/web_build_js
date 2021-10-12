@@ -1,10 +1,10 @@
-import react from 'react';
+import { useState, useEffect } from 'react';
 import styles from 'styles/components/Footer.module.scss';
 
 export default function FooterComponent(props) {
-  const [value, setValue] = react.useState('');
- 
-  react.useEffect(() => {
+  const [value, setValue] = useState('');
+
+  useEffect(() => {
     localStorage.setItem('bob', 'bill');
     setValue(localStorage.getItem('bob'));
   }, [setValue]);

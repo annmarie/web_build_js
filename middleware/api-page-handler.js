@@ -1,10 +1,9 @@
-import _ from "lodash";
-import { serialize } from "cookie";
+import _ from 'lodash';
+import { serialize } from 'cookie';
 import Cors from 'cors'
 
-const cors = initMiddleware(
+const cors = middlewarePromise(
   // options here: https://github.com/expressjs/cors#configuration-options
-    //methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   Cors({
     origin: "*",
     methods: "GET,POST",
@@ -25,7 +24,7 @@ const cookie = (res, name, value, options = {}) => {
 };
 
 const apiPageHandler = (handler) => (req, res) => {
-  // set cors
+  // set cors before moving on
   await cors(req, res)
 
   // assign to res object
@@ -34,7 +33,7 @@ const apiPageHandler = (handler) => (req, res) => {
   return handler(req, res);
 };
 
-function initMiddleware(middleware) {
+function middlewarePromise(middleware) {
   return (req, res) =>
     new Promise((resolve, reject) => {
       middleware(req, res, (result) => {
