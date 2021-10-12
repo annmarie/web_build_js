@@ -1,7 +1,7 @@
 import 'styles/globals.scss';
 
-function TheApp({ Component, pageProps }) {
+function MyMediaList({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }
 
-export default TheApp;
+export default MyMediaList;

@@ -1,4 +1,4 @@
-const _ = require("lodash");
+const _ = require('lodash');
 
 module.exports = (phase, { defaultConfig }) => {
   const newConfig = {
@@ -11,8 +11,8 @@ module.exports = (phase, { defaultConfig }) => {
       return {
         fallback: [
           {
-            source: "/:path*",
-            destination: "/"
+            source: '/:path*',
+            destination: '/'
           }
         ]
       };

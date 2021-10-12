@@ -1,4 +1,4 @@
-# MyMediaList 
+# My Media List 
 
 ### Install dependencies
 

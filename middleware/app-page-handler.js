@@ -1,5 +1,5 @@
-import next from "next";
-import nextConnect from "next-connect";
+import next from 'next';
+import nextConnect from 'next-connect';
 
 const appPageHandler = nextConnect();
 
