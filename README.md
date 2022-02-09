@@ -1,4 +1,4 @@
-# My Media List 
+# Simple web framework using next.js 
 
 ### Install dependencies
 
