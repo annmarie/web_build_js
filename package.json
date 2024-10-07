@@ -11,7 +11,7 @@
     "postlint-fix": "prettier --ignore-path .eslintignore --write \"**/*.{*{js,jsx,json},babelrc,eslintrc,prettierrc,stylelintrc}\""
   },
   "dependencies": {
-    "cookie": "0.4.0",
+    "cookie": "0.7.0",
     "cors": "^2.8.5",
     "lodash": "^4.17.21",
     "next": "latest",
